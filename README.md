@@ -1,10 +1,10 @@
-# Wildfire Alarm hardware (biobot-hardware)
+# Wildfire Alarm hardware
 
 Hardware for the Wildfire Alarm sensor node: an open, low-cost module
 placed at the forest edge to catch early signs of smoke. This repository
 holds the carrier PCB design, fabrication outputs, and photos of the
 assembled board. Firmware lives in
-[biobot-firmware](https://github.com/biobotproject-org/biobot-firmware).
+[firmware](https://github.com/wildfirealarm-org/firmware).
 
 Licensed under the CERN Open Hardware Licence v2, Permissive
 (CERN-OHL-P-2.0). See `LICENSE.txt`.

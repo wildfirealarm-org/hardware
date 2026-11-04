@@ -1,13 +1,13 @@
 # biobot_sled.py  -  Autodesk Fusion script
 #
-# Builds the BioBot pipe-enclosure sled for a 6-inch Schedule 40 PVC tube, plus
+# Builds the Wildfire Alarm pipe-enclosure sled for a 6-inch Schedule 40 PVC tube, plus
 # a reference model of the tube so the fit can be checked on screen.
 #
 # How to run:
 #   Utilities tab -> Add-Ins -> Scripts and Add-Ins -> "+" next to My Scripts
 #   -> Python, name it biobot_sled -> Create. Click Edit (opens VS Code or
 #   Spyder), replace the whole file with this one, save, then select the
-#   script and press Run. A new component "BioBot Sled" appears in a new or
+#   script and press Run. A new component "Wildfire Alarm Sled" appears in a new or
 #   active design.
 #
 # Coordinates: Z runs up the tube (0 = outer face of the sensor bulkhead at the
@@ -233,7 +233,7 @@ def new_component(root, name):
 # Sled
 # ---------------------------------------------------------------------------
 def build_sled(root):
-    comp = new_component(root, 'BioBot Sled')
+    comp = new_component(root, 'Wildfire Alarm Sled')
     new_body = adsk.fusion.FeatureOperations.NewBodyFeatureOperation
     cut = adsk.fusion.FeatureOperations.CutFeatureOperation
 
@@ -406,7 +406,7 @@ def run(context):
         app.activeViewport.fit()
         chord = 2.0 * math.sqrt(BULK_R ** 2 - PLATE_DROP ** 2)
         ui.messageBox(
-            'BioBot sled built.\n\n'
+            'Wildfire Alarm sled built.\n\n'
             f'Sled: {PLATE_W:.0f} x {PLATE_L:.0f} x {PLATE_T:.0f} mm plate, bulkheads {2 * BULK_R:.1f} mm dia\n'
             f'Plate sits {PLATE_DROP:.0f} mm below centre; chord there is {chord:.0f} mm\n'
             f'Victron headroom at its edges: {math.sqrt(BULK_R ** 2 - (VIC_W / 2) ** 2) + PLATE_DROP:.0f} mm (needs {VIC_H + VIC_BOSS_H:.0f})\n\n'
